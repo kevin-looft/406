@@ -1,0 +1,31 @@
+/* Prob 3.63 */
+long switch_prob(long x, long n) 
+{
+  long result = x;
+  switch(n - 60) {
+  case 0:
+    //result *= 8;
+    //    break;
+    //  case 1: 
+    //    result += 75;
+    //break;
+  case 2:
+    result *= 8;
+    break;
+  case 3:
+    result = result / 8;
+    break;
+  case 4:
+    result *= 16;
+    result -= x;
+  case 5:
+    result *= result;
+  default:
+    result += 75;
+  }
+  return result;
+}
+
+int main () {
+  switch_prob(2, 63);
+}
